@@ -1,23 +1,27 @@
 package ma.soltani.games.sokoban;
 
+import javax.swing.*;
 import java.awt.*;
 
-public class Main
+public class Main extends JFrame
 {
     public Main()
     {
-        Frame f = new Frame();
-        Button b = new Button();
-        b.setBounds(80, 20, 100, 20);
-        f.add(b);
-        f.setSize(300, 250);
-        f.setTitle("JavaTPoint");
-        f.setLayout(null);
-        f.setVisible(true);
+        add(new Level());
+        pack();
+        setTitle("Sokoban Java 2D");
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        Main m = new Main();
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                Main ex = new Main();
+                ex.setVisible(true);
+            }
+        });
     }
 }
