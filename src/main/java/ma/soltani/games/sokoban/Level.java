@@ -41,7 +41,5 @@ public class Level extends JPanel
         Graphics2D g2d = (Graphics2D) g;
         g2d.drawImage(mario, 0, 0, null);
         g2d.drawImage(mario2, 100, 100, null);
-        g2d.rotate(Math.PI/4);
-        g2d.dispose();
     }
 }
