@@ -23,9 +23,9 @@ public class Level extends JPanel
         ImageIcon IC = new ImageIcon(Objects.requireNonNull(getClass().getResource("/playerFace.png")));
         this.mario = IC.getImage();
 
-
         try {
-            BufferedImage image = ImageIO.read(getClass().getResource("/playerFace.png"));
+            BufferedImage img = ImageIO.read(getClass().getResource("/playerFace.png"));
+            this.mario2 = img;
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -40,5 +40,6 @@ public class Level extends JPanel
 
         Graphics2D g2d = (Graphics2D) g;
         g2d.drawImage(mario, 0, 0, null);
+        g2d.drawImage(mario, 100, 100, null);
     }
 }
