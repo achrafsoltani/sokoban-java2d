@@ -1,12 +1,16 @@
 package ma.soltani.games.sokoban;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.Objects;
 
 public class Level extends JPanel
 {
     private Image mario;
+    private Image mario2;
 
     public Level()
     {
@@ -15,8 +19,18 @@ public class Level extends JPanel
         d.height = 600;
         setPreferredSize(d);
 
+        // Load image method 1
         ImageIcon IC = new ImageIcon(Objects.requireNonNull(getClass().getResource("/playerFace.png")));
         this.mario = IC.getImage();
+
+
+        try {
+            BufferedImage image = ImageIO.read(getClass().getResource("/playerFace.png"));
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
