@@ -16,7 +16,7 @@ public class Crate extends JPanel
         setPreferredSize(d);
 
         // Load image method 1
-        ImageIcon IC = new ImageIcon(Objects.requireNonNull(getClass().getResource("/crate_01.png")));
+        ImageIcon IC = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Crates/crate_01.png")));
         this.image = IC.getImage();
     }
 
