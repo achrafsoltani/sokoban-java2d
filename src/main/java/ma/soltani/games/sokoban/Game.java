@@ -46,9 +46,4 @@ public class Game extends JPanel implements ActionListener
         this.ground = ImageLoader.loadImage("/Ground/ground_01.png");
         this.player = ImageLoader.loadImage("/Player/player_01.png");
     }
-
-    private void drawImages()
-    {
-
-    }
 }
