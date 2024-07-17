@@ -1,5 +1,6 @@
 package ma.soltani.games.sokoban;
 
+import ma.soltani.games.sokoban.data.Map;
 import ma.soltani.games.sokoban.helpers.ImageLoader;
 
 import javax.swing.*;
@@ -9,16 +10,22 @@ import java.awt.event.ActionListener;
 
 public class Game extends JPanel implements ActionListener
 {
+    private final int MAP_WIDTH = 8;
+    private final int MAP_HEIGHT = 7;
+    private final int MAP_TILE_SIZE = 64;
+
     private Image block;
     private Image crate;
     private Image environment;
     private Image ground;
     private Image player;
+    private Map map;
 
     public Game()
     {
-        setPreferredSize(new Dimension(800, 600));
+        setPreferredSize(new Dimension(MAP_WIDTH * MAP_TILE_SIZE, MAP_HEIGHT * MAP_TILE_SIZE));
         this.loadImages();
+        this.map = new Map();
     }
 
     @Override
