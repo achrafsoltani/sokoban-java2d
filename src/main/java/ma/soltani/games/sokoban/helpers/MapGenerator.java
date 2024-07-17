@@ -43,8 +43,8 @@ public class MapGenerator
         tiles[3][1] = new Tile("GRD", 3, 1);
         tiles[3][2] = new Tile("CRT", 3, 2);
         tiles[3][3] = new Tile("ENV", 3, 3);
-        tiles[3][4] = new Tile("ENV", 3, 4);
-        tiles[3][5] = new Tile("CRT", 3, 5);
+        tiles[3][4] = new Tile("CRT", 3, 4);
+        tiles[3][5] = new Tile("GRD", 3, 5);
         tiles[3][6] = new Tile("GRD", 3, 6);
         tiles[3][7] = new Tile("BLK", 3, 7);
 
