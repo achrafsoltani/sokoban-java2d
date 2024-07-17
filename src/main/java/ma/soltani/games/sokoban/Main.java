@@ -7,7 +7,7 @@ public class Main extends JFrame
 {
     public Main()
     {
-        add(new Level());
+        add(new Game());
         pack();
         setTitle("Sokoban Java 2D");
         setLocationRelativeTo(null);
