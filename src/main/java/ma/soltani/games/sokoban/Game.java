@@ -25,17 +25,13 @@ public class Game extends JPanel implements ActionListener
     {
         setPreferredSize(new Dimension(MAP_WIDTH * MAP_TILE_SIZE, MAP_HEIGHT * MAP_TILE_SIZE));
         this.loadImages();
-        this.map = new Map();
+        this.map = new Map(MAP_TILE_SIZE);
     }
 
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(this.block, 10, 10, this);
-        g.drawImage(this.crate, 50, 50, this);
-        g.drawImage(this.environment, 100, 100, this);
-        g.drawImage(this.ground, 150, 150, this);
-        g.drawImage(this.player, 200, 200, this);
+        this.map.render(g);
         Toolkit.getDefaultToolkit().sync();
     }
 
