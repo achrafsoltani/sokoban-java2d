@@ -17,6 +17,7 @@ public class Game extends JPanel implements ActionListener
 
     public Game()
     {
+        setPreferredSize(new Dimension(800, 600));
         this.loadImages();
     }
 
