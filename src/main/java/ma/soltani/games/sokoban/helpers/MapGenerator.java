@@ -58,15 +58,25 @@ public class MapGenerator
         tiles[4][6] = new Tile("GRD", 4, 6);
         tiles[4][7] = new Tile("BLK", 4, 7);
 
-        // Firth row (5)
-        tiles[4][0] = new Tile("BLK", 4, 0);
-        tiles[4][1] = new Tile("GRD", 4, 1);
-        tiles[4][2] = new Tile("GRD", 4, 2);
-        tiles[4][3] = new Tile("ENV", 4, 3);
-        tiles[4][4] = new Tile("ENV", 4, 4);
-        tiles[4][5] = new Tile("CRT", 4, 5);
-        tiles[4][6] = new Tile("GRD", 4, 6);
-        tiles[4][7] = new Tile("BLK", 4, 7);
+        // Sixth row (5)
+        tiles[5][0] = new Tile("BLK", 5, 0);
+        tiles[5][1] = new Tile("GRD", 5, 1);
+        tiles[5][2] = new Tile("GRD", 5, 2);
+        tiles[5][3] = new Tile("BLK", 5, 3);
+        tiles[5][4] = new Tile("GRD", 5, 4);
+        tiles[5][5] = new Tile("GRD", 5, 5);
+        tiles[5][6] = new Tile("GRD", 5, 6);
+        tiles[5][7] = new Tile("BLK", 5, 7);
+
+        // Seventh row (6)
+        tiles[6][0] = new Tile("BLK", 6, 0);
+        tiles[6][1] = new Tile("BLK", 6, 1);
+        tiles[6][2] = new Tile("BLK", 6, 2);
+        tiles[6][3] = new Tile("BLK", 6, 3);
+        tiles[6][4] = new Tile("BLK", 6, 4);
+        tiles[6][5] = new Tile("BLK", 6, 5);
+        tiles[6][6] = new Tile("BLK", 6, 6);
+        tiles[6][7] = new Tile("BLK", 6, 7);
 
         return tiles;
     }
