@@ -19,14 +19,14 @@ public class MapGenerator
         tiles[0][7] = new Tile("BLK", 7, 0);
 
         // Second row (1)
-        tiles[1][0] = new Tile("BLK", 1, 1);
-        tiles[1][1] = new Tile("GRD", 2, 1);
-        tiles[1][2] = new Tile("GRD", 3, 1);
-        tiles[1][3] = new Tile("BLK", 4, 1);
-        tiles[1][4] = new Tile("GRD", 5, 1);
-        tiles[1][5] = new Tile("GRD", 6, 1);
-        tiles[1][6] = new Tile("GRD", 7, 1);
-        tiles[1][7] = new Tile("BLK", 8, 1);
+        tiles[1][0] = new Tile("BLK", 0, 1);
+        tiles[1][1] = new Tile("GRD", 1, 1);
+        tiles[1][2] = new Tile("GRD", 2, 1);
+        tiles[1][3] = new Tile("BLK", 3, 1);
+        tiles[1][4] = new Tile("GRD", 4, 1);
+        tiles[1][5] = new Tile("GRD", 5, 1);
+        tiles[1][6] = new Tile("GRD", 6, 1);
+        tiles[1][7] = new Tile("BLK", 7, 1);
 
         // Third row (2)
         tiles[2][0] = new Tile("BLK", 0, 2);
@@ -54,7 +54,7 @@ public class MapGenerator
         tiles[4][2] = new Tile("GRD", 2, 4);
         tiles[4][3] = new Tile("ENV", 3, 4);
         tiles[4][4] = new Tile("ENV", 4, 4);
-        tiles[4][5] = new Tile("CRT", 4, 4);
+        tiles[4][5] = new Tile("CRT", 5, 4);
         tiles[4][6] = new Tile("GRD", 6, 4);
         tiles[4][7] = new Tile("BLK", 7, 4);
 
@@ -69,14 +69,14 @@ public class MapGenerator
         tiles[5][7] = new Tile("BLK", 7, 5);
 
         // Seventh row (6)
-        tiles[6][0] = new Tile("BLK", 0, 0);
-        tiles[6][1] = new Tile("BLK", 1, 1);
-        tiles[6][2] = new Tile("BLK", 2, 2);
-        tiles[6][3] = new Tile("BLK", 3, 3);
-        tiles[6][4] = new Tile("BLK", 4, 4);
-        tiles[6][5] = new Tile("BLK", 5, 5);
+        tiles[6][0] = new Tile("BLK", 0, 6);
+        tiles[6][1] = new Tile("BLK", 1, 6);
+        tiles[6][2] = new Tile("BLK", 2, 6);
+        tiles[6][3] = new Tile("BLK", 3, 6);
+        tiles[6][4] = new Tile("BLK", 4, 6);
+        tiles[6][5] = new Tile("BLK", 5, 6);
         tiles[6][6] = new Tile("BLK", 6, 6);
-        tiles[6][7] = new Tile("BLK", 7, 7);
+        tiles[6][7] = new Tile("BLK", 7, 6);
 
         return tiles;
     }
