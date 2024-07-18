@@ -25,6 +25,6 @@ public class Mario extends JPanel
     {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
-        g2d.drawImage(this.image, 0, 0, null);
+        g2d.drawImage(this.image, 64, 3*64, null);
     }
 }
