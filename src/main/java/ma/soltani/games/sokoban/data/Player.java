@@ -30,4 +30,8 @@ public class Player
         this.x += dx;
     }
 
+    public void moveY(int dy)
+    {
+        this.y += dy;
+    }
 }
