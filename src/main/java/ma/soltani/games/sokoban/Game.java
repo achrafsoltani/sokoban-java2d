@@ -24,7 +24,7 @@ public class Game extends JPanel implements ActionListener
     {
         setPreferredSize(new Dimension(MAP_WIDTH * MAP_TILE_SIZE, MAP_HEIGHT * MAP_TILE_SIZE));
         this.map = new Map(MAP_TILE_SIZE);
-        this.player = new Player();
+        this.player = new Player(1, 3, this.MAP_TILE_SIZE);
     }
 
     @Override
@@ -60,6 +60,32 @@ public class Game extends JPanel implements ActionListener
 
         if (key == KeyEvent.VK_DOWN) {
             dy = 2;
+        }
+
+        this.player.moveX(dx);
+        this.player.moveY(dy);
+    }
+
+    public void keyReleased(KeyEvent e) {
+
+        int key = e.getKeyCode();
+        int dx = 0;
+        int dy = 0;
+
+        if (key == KeyEvent.VK_LEFT) {
+            dx = 0;
+        }
+
+        if (key == KeyEvent.VK_RIGHT) {
+            dx = 0;
+        }
+
+        if (key == KeyEvent.VK_UP) {
+            dy = 0;
+        }
+
+        if (key == KeyEvent.VK_DOWN) {
+            dy = 0;
         }
 
         this.player.moveX(dx);
