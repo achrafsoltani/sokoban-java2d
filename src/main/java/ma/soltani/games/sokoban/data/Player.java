@@ -7,15 +7,21 @@ import java.util.Objects;
 public class Player
 {
     private Image image;
+    private int x;
+    private int y;
+    private int spriteSize;
 
-    public Player()
+    public Player(int x, int y, int spriteSize)
     {
+        this.x = x;
+        this.y = y;
+        this.spriteSize = spriteSize;
         ImageIcon IC = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Player/player_01.png")));
         this.image = IC.getImage();
     }
 
     public void render(Graphics g)
     {
-        g.drawImage(this.image, 64, 3*64, null);
+        g.drawImage(this.image, x*spriteSize, y*spriteSize, null);
     }
 }
