@@ -1,7 +1,5 @@
 package ma.soltani.games.sokoban;
 
-import ma.soltani.games.sokoban.objects.Mario;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -34,8 +32,6 @@ public class Level extends JPanel implements ActionListener
         setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
         x = INITIAL_X;
         y = INITIAL_Y;
-
-        add(new Mario());
 
         ImageIcon ii = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Ground/ground_01.png")));
         ground = ii.getImage();
