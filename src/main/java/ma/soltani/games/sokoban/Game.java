@@ -2,8 +2,6 @@ package ma.soltani.games.sokoban;
 
 import ma.soltani.games.sokoban.data.Map;
 import ma.soltani.games.sokoban.data.Player;
-import ma.soltani.games.sokoban.helpers.ImageLoader;
-import ma.soltani.games.sokoban.objects.Mario;
 
 import javax.swing.*;
 import java.awt.*;
