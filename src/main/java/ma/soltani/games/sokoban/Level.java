@@ -1,6 +1,5 @@
 package ma.soltani.games.sokoban;
 
-import ma.soltani.games.sokoban.objects.Crate;
 import ma.soltani.games.sokoban.objects.Mario;
 
 import javax.swing.*;
@@ -37,7 +36,6 @@ public class Level extends JPanel implements ActionListener
         y = INITIAL_Y;
 
         add(new Mario());
-        add(new Crate());
 
         ImageIcon ii = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Ground/ground_01.png")));
         ground = ii.getImage();
