@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 public class Game extends JPanel implements ActionListener
 {
@@ -37,5 +38,31 @@ public class Game extends JPanel implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e) {
 
+    }
+
+    public void keyPressed(KeyEvent e) {
+
+        int key = e.getKeyCode();
+        int dx = 0;
+        int dy = 0;
+
+        if (key == KeyEvent.VK_LEFT) {
+            dx = -2;
+        }
+
+        if (key == KeyEvent.VK_RIGHT) {
+            dx = 2;
+        }
+
+        if (key == KeyEvent.VK_UP) {
+            dy = -2;
+        }
+
+        if (key == KeyEvent.VK_DOWN) {
+            dy = 2;
+        }
+
+        this.player.moveX(dx);
+        this.player.moveY(dy);
     }
 }
