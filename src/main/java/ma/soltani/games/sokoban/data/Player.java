@@ -24,4 +24,10 @@ public class Player
     {
         g.drawImage(this.image, x*spriteSize, y*spriteSize, null);
     }
+
+    public void moveX(int dx)
+    {
+        this.x += dx;
+    }
+
 }
