@@ -23,6 +23,7 @@ public class Game extends JPanel implements ActionListener
         setPreferredSize(new Dimension(MAP_WIDTH * MAP_TILE_SIZE, MAP_HEIGHT * MAP_TILE_SIZE));
         this.map = new Map(MAP_TILE_SIZE);
         this.player = new Player(1, 3, this.MAP_TILE_SIZE);
+        setFocusable(true);
     }
 
     @Override
@@ -41,6 +42,7 @@ public class Game extends JPanel implements ActionListener
     public void keyPressed(KeyEvent e) {
 
         int key = e.getKeyCode();
+        System.out.println("key pressed: "+key);
         int dx = 0;
         int dy = 0;
 
