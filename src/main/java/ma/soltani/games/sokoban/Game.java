@@ -8,8 +8,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class Game extends JPanel implements ActionListener
+public class Game extends JPanel implements ActionListener, KeyListener
 {
     private final int MAP_WIDTH = 8;
     private final int MAP_HEIGHT = 7;
@@ -36,6 +37,11 @@ public class Game extends JPanel implements ActionListener
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
 
     }
 
