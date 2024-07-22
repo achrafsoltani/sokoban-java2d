@@ -42,7 +42,8 @@ public class Game extends JPanel implements ActionListener, KeyListener
 
     @Override
     public void keyTyped(KeyEvent e) {
-
+        int key = e.getKeyCode();
+        System.out.println("key pressed: "+key);
     }
 
     public void keyPressed(KeyEvent e) {
