@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Game extends JPanel implements ActionListener, KeyListener
+public class Game extends JPanel implements ActionListener
 {
     private final int MAP_WIDTH = 8;
     private final int MAP_HEIGHT = 7;
@@ -25,6 +25,21 @@ public class Game extends JPanel implements ActionListener, KeyListener
         this.map = new Map(MAP_TILE_SIZE);
         this.player = new Player(1, 3, this.MAP_TILE_SIZE);
         setFocusable(true);
+
+        this.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                System.out.println("Key pressed code=" + e.getKeyCode() + ", char=" + e.getKeyChar());
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+            }
+        });
     }
 
     @Override
@@ -40,7 +55,6 @@ public class Game extends JPanel implements ActionListener, KeyListener
 
     }
 
-    @Override
     public void keyTyped(KeyEvent e) {
         int key = e.getKeyCode();
         System.out.println("key pressed: "+key);
