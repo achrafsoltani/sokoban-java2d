@@ -34,6 +34,29 @@ public class Game extends JPanel implements ActionListener
             @Override
             public void keyPressed(KeyEvent e) {
                 System.out.println("Key pressed code=" + e.getKeyCode() + ", char=" + e.getKeyChar());
+                int key = e.getKeyCode();
+
+                int dx = 0;
+                int dy = 0;
+
+                if (key == KeyEvent.VK_LEFT) {
+                    dx = -2;
+                }
+
+                if (key == KeyEvent.VK_RIGHT) {
+                    dx = 2;
+                }
+
+                if (key == KeyEvent.VK_UP) {
+                    dy = -2;
+                }
+
+                if (key == KeyEvent.VK_DOWN) {
+                    dy = 2;
+                }
+
+                player.moveX(dx);
+                player.moveY(dy);
             }
 
             @Override
@@ -58,33 +81,6 @@ public class Game extends JPanel implements ActionListener
     public void keyTyped(KeyEvent e) {
         int key = e.getKeyCode();
         System.out.println("key pressed: "+key);
-    }
-
-    public void keyPressed(KeyEvent e) {
-
-        int key = e.getKeyCode();
-        System.out.println("key pressed: "+key);
-        int dx = 0;
-        int dy = 0;
-
-        if (key == KeyEvent.VK_LEFT) {
-            dx = -2;
-        }
-
-        if (key == KeyEvent.VK_RIGHT) {
-            dx = 2;
-        }
-
-        if (key == KeyEvent.VK_UP) {
-            dy = -2;
-        }
-
-        if (key == KeyEvent.VK_DOWN) {
-            dy = 2;
-        }
-
-        this.player.moveX(dx);
-        this.player.moveY(dy);
     }
 
     public void keyReleased(KeyEvent e) {
