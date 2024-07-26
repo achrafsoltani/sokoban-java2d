@@ -26,7 +26,7 @@ public class Game extends JPanel
         this.player = new Player(1, 3, this.MAP_TILE_SIZE);
         setFocusable(true);
 
-        this.addKeyListener(new EventManager(this.player));
+        this.addKeyListener(new EventManager(this.player, this));
     }
 
     @Override
