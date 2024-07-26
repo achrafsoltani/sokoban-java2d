@@ -51,5 +51,10 @@ public class Player
     public void moveY(int dy)
     {
         this.y += dy;
+        if(dy>0){
+            this.selected = this.image_down;
+        } else {
+            this.selected = this.image_up;
+        }
     }
 }
