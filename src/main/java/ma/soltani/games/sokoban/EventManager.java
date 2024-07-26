@@ -3,6 +3,7 @@ package ma.soltani.games.sokoban;
 import ma.soltani.games.sokoban.data.Player;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -11,11 +12,11 @@ public class EventManager implements KeyListener
     private final int MOVE_STEP = 1;
 
     private Player player;
-    private JPanel panel;
+    private Graphics g;
 
-    public EventManager(Player p, JPanel panel){
+    public EventManager(Player p, Graphics g){
         this.player = p;
-        this.panel = panel;
+        this.g = g;
     }
 
 
@@ -50,7 +51,7 @@ public class EventManager implements KeyListener
         player.moveX(dx);
         player.moveY(dy);
 
-        panel.repaint();
+        player.render(g);
     }
 
     @Override
@@ -78,6 +79,6 @@ public class EventManager implements KeyListener
         this.player.moveX(dx);
         this.player.moveY(dy);
 
-        panel.repaint();
+        player.render(g);
     }
 }
