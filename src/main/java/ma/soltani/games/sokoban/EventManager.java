@@ -8,6 +8,8 @@ import java.awt.event.KeyListener;
 
 public class EventManager implements KeyListener
 {
+    private final int MOVE_STEP = 1;
+
     private Player player;
     private JPanel panel;
 
@@ -30,19 +32,19 @@ public class EventManager implements KeyListener
         int dy = 0;
 
         if (key == KeyEvent.VK_LEFT) {
-            dx = -2;
+            dx = -MOVE_STEP;
         }
 
         if (key == KeyEvent.VK_RIGHT) {
-            dx = 2;
+            dx = MOVE_STEP;
         }
 
         if (key == KeyEvent.VK_UP) {
-            dy = -2;
+            dy = -MOVE_STEP;
         }
 
         if (key == KeyEvent.VK_DOWN) {
-            dy = 2;
+            dy = MOVE_STEP;
         }
 
         player.moveX(dx);
